@@ -1,22 +1,22 @@
-import { useState } from "react";
+// import { useState } from "react";
 import Button from "./Button";
 import Count from "./Count";
 
-const Counter = () => {
+const Counter = ({ count, onIncrement, onDecrement }) => {
 	// Controller or Logic Parts
 	// create a state for our counter
-	const [count, setCount] = useState(0);
+	// const [count, setCount] = useState(0);
 
-	const handleIncrement = () => {
-		if (count < 10) {
-			setCount(count + 1);
-		}
-	};
-	const handleDecrement = () => {
-		if (count > 0) {
-			setCount(count - 1);
-		}
-	};
+	// const handleIncrement = () => {
+	// 	if (count < 10) {
+	// 		setCount(count + 1);
+	// 	}
+	// };
+	// const handleDecrement = () => {
+	// 	if (count > 0) {
+	// 		setCount(count - 1);
+	// 	}
+	// };
 	// Views
 	return (
 		<div className="flex flex-col items-center justify-center p-8 rounded-xl bg-gray-100">
@@ -28,13 +28,13 @@ const Counter = () => {
 
 			<div className="flex space-x-4 mt-6">
 				<Button
-					onClick={handleIncrement}
+					onClick={onIncrement}
 					className="bg-green-500 hover:bg-green-600"
 				>
 					Increment
 				</Button>
 				<Button
-					onClick={handleDecrement}
+					onClick={onDecrement}
 					className="bg-red-500 hover:bg-red-600"
 				>
 					Decrement
