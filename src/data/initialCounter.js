@@ -1,4 +1,4 @@
-const initialCounter = () => [
+const initialCounter = [
 	{
 		id: 1,
 		value: 0,
